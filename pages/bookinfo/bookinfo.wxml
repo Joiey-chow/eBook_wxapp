@@ -1,0 +1,17 @@
+<!--pages/bookinfo/bookinfo.wxml-->
+<view>
+  <view wx:for="{{datalist}}">
+  <i-card bindtap="cardClick" data-id="{{item.link}}">
+    <view slot="content">
+      {{item.title}}
+    </view>
+  </i-card>
+</view>
+<view>    
+  <i-spin custom fix wx:if="{{ spinShow }}">
+        <image src="../../static/e47cf39b1f1c3987263c77b711c97244.gif" ></image>
+        <view>Loading...</view>
+  </i-spin>
+</view>
+</view>
+

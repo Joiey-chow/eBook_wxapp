@@ -1,0 +1,6 @@
+/* pages/bookcontent/bookcontent.wxss */
+.title_J {
+  overflow: hidden;
+  font-size: large;
+  margin: 20rpx;
+} 

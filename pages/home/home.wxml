@@ -1,0 +1,26 @@
+<!--pages/home/home.wxml-->
+<i-row>
+    <view>
+        <image class="showImg" src="../../static/showImg.jpg"></image>
+    </view>
+</i-row>
+<i-row>
+    <i-panel>
+        <i-col span="20" i-class="col-class"><i-input value="{{ bookname }}" title="搜索书名" bind:change="search" maxlength="100"></i-input></i-col>
+        <i-col span="4" i-class="col-class"><i-icon size="30" type="search" /></i-col>
+    </i-panel>
+</i-row>
+<i-row>
+    <view wx:for="{{datalist}}"> 
+        <i-card title="{{item.title}}" extra="追更率：{{item.retentionRatio}}%" bindtap="cardClick" data-id="{{item._id}}" thumb="{{item.cover}}">
+        <view slot="content">作者：{{item.author}}</view>
+        </i-card>
+    </view>
+</i-row>
+
+<i-row>
+    <i-tab-bar current="{{ current }}" color="#87CEFA" bindchange="handleChange" fixed="true">
+        <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+        <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
+    </i-tab-bar>
+</i-row>

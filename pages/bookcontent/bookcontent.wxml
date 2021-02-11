@@ -1,0 +1,11 @@
+<!--pages/bookcontent/bookcontent.wxml-->
+<view class="title_J">
+  <text >{{title}}</text>
+</view>
+
+<i-card>
+  <view slot="content">
+    <text>{{content}}</text>
+  </view>
+</i-card>
+
